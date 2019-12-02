@@ -1,4 +1,4 @@
-# My awesome REST API 
+# REST API with SQLAlChemy 
 
 ## Installation
 
