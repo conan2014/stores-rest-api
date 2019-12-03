@@ -19,11 +19,6 @@ app.secret_key = 'jose' # app.secret_key is used to encode the JWT so you know i
                         # Make this long, random, and secret in a real app
 api = Api(app)
 
-@app.before_first_request
-def create_tables():
-    db.create_all()   # SQLAlchemy only creates tables that it sees according to import
-                      # So if we delete 'from resources.store import Store, StoreList', then SQLAlchemy won't create stores table
-
 jwt = JWT(app, authenticate, identity) # as soon as we create a JWT object,
                                        # Flask-JWT registers an endpoint with our application, /auth
 
