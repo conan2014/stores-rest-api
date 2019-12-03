@@ -1,1 +1,1 @@
-web: uwsgi uwsgi.ini  # run uwsgi process with the file uwsgi.ini
+web: uwsgi uwsgi.ini
